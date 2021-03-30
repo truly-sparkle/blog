@@ -1,29 +1,16 @@
 import React from "react";
-import ProfilePhoto from "../molecules/ProfilePhoto";
 import imgA from "../assets/avatar.png";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+import Profile from "../molecules/Profile";
 
-const ProfileContainer = styled.div`
-  width: 20%;
-  height: 100%;
-  background: linear-gradient(to left top, #00a1ff, #2bba7c);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-`
+
 const AppContainer = styled.div`
   height: 100%;
   display: flex;
 `
 
-const BlogTitle = styled.span`
-  font-size: 24px;
-  font-weight: bold;
-  margin: 24px 0;
-`
+
 const BoardTitle = styled.span`
   font-weight: bold;
   font-size: 32px;
@@ -53,15 +40,7 @@ const data = [{
 
 const Home = () => {
     return (<AppContainer className="App">
-        <ProfileContainer>
-            <BlogTitle>
-                Yunchang's Blog
-            </BlogTitle>
-            <ProfilePhoto photoUrl={imgA}/>
-            <div>
-                안녕하세요. 개발자 최윤창 입니다.
-            </div>
-        </ProfileContainer>
+        <Profile/>
         <div className="board" style={{
             width: '80%',
             margin: '0 5%',

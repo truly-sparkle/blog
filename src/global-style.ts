@@ -2,7 +2,7 @@ import {createGlobalStyle} from 'styled-components';
 import {reset} from 'styled-reset';
 
 // 외부에서 import 할거니까 모듈 내보내자~!
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
@@ -36,5 +36,25 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 `;
+export const BoardGlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root{
+    height: 100%;
+  }
+`;
+
 
 export default GlobalStyle;
